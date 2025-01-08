@@ -30,6 +30,7 @@ class StudentsView(APIView):
         if serializers.is_valid():
             serializers.save()
             return Response({'status':'Success','data':serializers.data})
+            # return Response({'status':'Success','data':serializers.data})
         else:
             return Response({'status':'Updated','data':serializers.data})
         
